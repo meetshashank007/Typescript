@@ -2,8 +2,12 @@
 
 const oldCivic = {
   name: 'civic',
-  year: 2000,
+  make: 2000,
+  year: new Date(),
   broken: true,
+  summary() {
+    return `Name ${this.name}`;
+  },
 };
 
 /*
@@ -22,14 +26,17 @@ const printVehicle = (vehicle: {
 
 interface IVehicle {
   name: string;
-  year: number;
+  make: number;
+  year: Date;
   broken: boolean;
+  summary(): string;
 }
 
 const printVehicle = (vehicle: IVehicle): void => {
   console.log(`Name: ${vehicle.name}`);
   console.log(`Year: ${vehicle.year}`);
   console.log(`Broken? ${vehicle.broken}`);
+  console.log(vehicle.summary());
 };
 
 printVehicle(oldCivic);
