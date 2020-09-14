@@ -18,3 +18,8 @@ carMakers.map((car: string): string => {
   //has access to string property methods due to type inference
   return car.toUpperCase();
 });
+
+//Flexible types
+const importantDates: (string | Date)[] = [new Date()];
+importantDates.push('2020-09-14');
+importantDates.push(new Date());
