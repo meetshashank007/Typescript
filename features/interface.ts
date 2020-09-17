@@ -40,3 +40,21 @@ const printVehicle = (vehicle: IVehicle): void => {
 };
 
 printVehicle(oldCivic);
+
+interface IReporatble {
+  summary(): string;
+}
+
+const oDrink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar`;
+  },
+};
+
+const printSummary = (item: IReporatble): void => {
+  console.log(item.summary());
+};
+printSummary(oDrink);
