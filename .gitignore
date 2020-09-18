@@ -1,1 +1,4 @@
 /maps/node_modules
+/maps/package-lock.json
+/maps/.cache
+/maps/dist
