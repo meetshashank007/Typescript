@@ -2,3 +2,6 @@
 /maps/package-lock.json
 /maps/.cache
 /maps/dist
+/sort/node_modules
+/sort/package-lock.json
+/sort/build
