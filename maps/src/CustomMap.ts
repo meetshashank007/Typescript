@@ -1,6 +1,13 @@
 /// <reference types="@types/googlemaps" />
-import { User } from './User';
-import { Company } from './Company';
+
+//work to add marker to map
+interface Mappable {
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
+
 export class CustomMap {
   private googleMap: google.maps.Map;
   constructor(DivId: string) {
@@ -10,7 +17,7 @@ export class CustomMap {
     });
   }
 
-  addMarker(mappable: User | Company): void {
+  addMarker(mappable: Mappable): void {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
